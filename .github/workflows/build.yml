@@ -105,7 +105,9 @@ env:
         name: Linux ARM
         runs-on: ubuntu-24.04-arm
         container: |
-            null
+          {
+            \"image\": \"ghcr.io/withoutaname25/arduino-ide/linux:main\"
+          }
         job-transfer-artifact-suffix: Linux_arm_64bit
         mergeable-channel-file: 'false'
       artifacts:
