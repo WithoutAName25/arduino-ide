@@ -2,7 +2,7 @@
 # syntax=docker/dockerfile:1
 
 # See: https://hub.docker.com/_/ubuntu/tags
-FROM ubuntu:18.10
+FROM ubuntu:22.04
 
 # This is required in order to use the Ubuntu package repositories for EOL Ubuntu versions:
 # https://help.ubuntu.com/community/EOLUpgrades#Update_sources.list
