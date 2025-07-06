@@ -10,7 +10,7 @@ RUN \
   sed \
     --in-place \
     --regexp-extended \
-    --expression='s/([a-z]{2}\.)?archive.ubuntu.com|security.ubuntu.com|ports.ubuntu.com/old-releases.ubuntu.com/g' \
+    --expression='s/([a-z]{2}\.)?archive.ubuntu.com\/ubuntu|security.ubuntu.com\/ubuntu|ports.ubuntu.com\/ubuntu-ports/old-releases.ubuntu.com\/ubuntu/g' \
     "/etc/apt/sources.list"
 
 RUN \
