@@ -4,15 +4,6 @@
 # See: https://hub.docker.com/_/ubuntu/tags
 FROM ubuntu:22.04
 
-# This is required in order to use the Ubuntu package repositories for EOL Ubuntu versions:
-# https://help.ubuntu.com/community/EOLUpgrades#Update_sources.list
-RUN \
-  sed \
-    --in-place \
-    --regexp-extended \
-    --expression='s/([a-z]{2}\.)?archive.ubuntu.com|security.ubuntu.com/old-releases.ubuntu.com/g' \
-    "/etc/apt/sources.list"
-
 RUN \
   apt-get \
     --yes \
