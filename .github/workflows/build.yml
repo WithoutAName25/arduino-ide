@@ -88,7 +88,7 @@ env:
         - path: '*Windows_64bit.zip'
           name: Windows_X86-64_zip
     - config:
-        name: Linux
+        name: Linux x86
         runs-on: ubuntu-latest
         container: |
           {
@@ -101,6 +101,18 @@ env:
           name: Linux_X86-64_zip
         - path: '*Linux_64bit.AppImage'
           name: Linux_X86-64_app_image
+    - config:
+        name: Linux ARM
+        runs-on: ubuntu-24.04-arm
+        container: |
+            null
+        job-transfer-artifact-suffix: Linux_arm_64bit
+        mergeable-channel-file: 'false'
+      artifacts:
+        - path: '*Linux_arm_64bit.zip'
+          name: Linux_arm-64_zip
+        - path: '*Linux_arm_64bit.AppImage'
+          name: Linux_arm-64_app_image
     - config:
         name: macOS x86
         runs-on: macos-13
